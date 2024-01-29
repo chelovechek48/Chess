@@ -1,7 +1,5 @@
-// @font-face {
-//   font-family: 'FONTNAME';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url('@fonts/FONTNAME.woff2') format('woff2'),
-//        url('@fonts/FONTNAME.woff') format('woff');
-// }
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+* {
+  font-family: 'Golos Text', sans-serif;
+}
