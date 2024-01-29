@@ -1,0 +1,17 @@
+@forward 'normalize';
+@forward 'fonts';
+@forward 'blocks';
+@use 'vars' as *;
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  max-width: $laptop;
+  padding-left: $padding-container;
+  padding-right: $padding-container;
+  margin-left: auto;
+  margin-right: auto;
+}
