@@ -1,0 +1,44 @@
+@use '../vars/' as *;
+
+.running-line {
+  color: $white;
+  background-color: $red;
+  padding: 1rem 0;
+  overflow: hidden;
+  display: flex;
+
+  &__group {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  &__item {
+    font-size: 22px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+
+    &::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $white;
+      margin-left: 12px;
+    }
+  }
+}
