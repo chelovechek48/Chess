@@ -63,6 +63,15 @@
       text-transform: uppercase;
       flex: 1 1 0;
     }
+    
+    &:focus-visible {
+      outline-color: $dark-gray;
+      outline-width: 0.25rem;
+      outline-offset: 0.4rem;
+      outline-style: solid;
+      transition: outline 0.2s;
+      border-radius: 0.25rem;
+    }
   }
 
   &__content {
@@ -84,6 +93,7 @@
   &__title {
     font-size: 0;
     font-weight: 400;
+    line-height: 1.1;
     &::before, &::after {
       display: inline-block;
       @media (min-width: calc($mobile_small + 1px)) {

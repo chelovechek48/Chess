@@ -1,6 +1,13 @@
 @use '../../vars/' as *;
 
 .button {
+  transition: all 0.2s;
+  &:focus-visible {
+    outline-color: $dark-gray;
+    outline-width: 0.25rem;
+    outline-offset: 0.4rem;
+    outline-style: solid;
+  }
   &_size {
     &_large {
       padding: 1rem;
@@ -16,9 +23,17 @@
     &_black {
       color: $white;
       background-color: $black;
+      &:hover {
+        color: $black;
+        background-color: $golden;
+      }
     }
     &_transparent {
       color: $black;
+      &:hover {
+        color: $white;
+        background-color: $black;
+      }
       @media (min-width: calc($container-width + 1px)) {
         background-color: transparent;
         border: 2px solid $black;
