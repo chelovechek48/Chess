@@ -1,3 +1,7 @@
+@use '../../vars/' as *;
+
 .title {
   font-family: 'Merriweather', serif;
+  color: $dark-gray;
+  text-transform: uppercase;
 }

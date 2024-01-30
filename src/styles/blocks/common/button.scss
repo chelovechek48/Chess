@@ -1,0 +1,31 @@
+@use '../../vars/' as *;
+
+.button {
+  &_size {
+    &_large {
+      padding: 1rem;
+      border-radius: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &_color {
+    &_black {
+      color: $white;
+      background-color: $black;
+    }
+    &_transparent {
+      color: $black;
+      @media (min-width: calc($container-width + 1px)) {
+        background-color: transparent;
+        border: 2px solid $black;
+      }
+      @media (max-width: $container-width) {
+        background-color: rgba($white, 0.9);
+      }
+    }
+  }
+}
