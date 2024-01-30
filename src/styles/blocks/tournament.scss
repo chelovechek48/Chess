@@ -1,0 +1,72 @@
+@use '../vars/' as *;
+
+.tournament {
+  padding-top: 5rem;
+
+  &__text, &__idea-image-wrapper::before {
+    color: $dark-gray;
+    font-family: 'Merriweather', serif;
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 400;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    &-wrapper {
+      flex: 1 1 0;
+    }
+    display: inline;
+    &_red {
+      color: $red;
+      font-weight: 700;
+    }
+
+    @media (max-width: $tablet) {
+      &_mobile_hidden {
+        font-size: 0;
+      }
+    }
+  }
+
+  &__idea {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem 3rem;
+
+    @media (max-width: $tablet) {
+      flex-wrap: wrap-reverse;
+    }
+    @media (max-width: $tablet) and (min-width: calc($mobile_small + 1px)) {
+      text-align: center;
+    }
+
+    &-image {
+      max-width: 394px;
+      width: 100%;
+      aspect-ratio: 394/250;
+      object-fit: cover;
+      border-radius: 50%;
+      &-wrapper {
+        @media (min-width: calc($tablet + 1px)) {
+          max-width: min(394px, 100%);
+        }
+        @media (max-width: $tablet) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &::before {
+            content: attr(data-before);
+            display: block;
+            margin-bottom: 1.5rem;
+            width: calc(100vw - 2 * $padding-container);
+          }
+        }
+      }
+    }
+  }
+
+  &__session {
+    display: none;
+  }
+}
