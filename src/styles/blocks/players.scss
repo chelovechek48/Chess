@@ -7,6 +7,8 @@
 
   &__container {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__navigation {
@@ -17,6 +19,7 @@
       height: clamp(45px, 6.25vw, 68px);
     }
     @media (max-width: $mobile) {
+      order: 10;
       justify-content: center;
       margin-top: 50px;
     }

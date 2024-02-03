@@ -196,6 +196,14 @@
         <h2 class="players__title title">
           Участники турнира
         </h2>
+        <div class="players__navigation navigation">
+          <button class="navigation__button navigation__button-prev"
+            data-increment="-1"
+            disabled></button>
+          <span class="navigation__number players__navigation-number"> / </span>
+          <button class="navigation__button navigation__button-next"
+            data-increment="1"></button>
+        </div>
         <ul class="navigation__slider players__list" data-slides-number="6">
           <li class="players__item">
             <div class="players__image-wrapper">
@@ -300,14 +308,6 @@
             </a>
           </li>
         </ul>
-        <div class="players__navigation navigation">
-          <button class="navigation__button navigation__button-prev"
-            data-increment="-1"
-            disabled></button>
-          <span class="navigation__number players__navigation-number"> / </span>
-          <button class="navigation__button navigation__button-next"
-            data-increment="1"></button>
-        </div>
       </div>
       </div>
     </section>
