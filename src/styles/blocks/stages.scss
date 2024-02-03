@@ -4,8 +4,9 @@
   overflow: hidden;
   &__title {
     font-size: 0;
-    margin-top: clamp(120px, 15vw, 200px);
+    margin-top: clamp(120px, 15vw, 188px);
     font-weight: 400;
+    line-height: 1.2;
   }
 
   &__list {
@@ -140,7 +141,7 @@
       max-width: 35rem;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 18px;
       &::before {
         font-family: 'Merriweather', serif;
         color: $dark-gray;
@@ -151,6 +152,7 @@
     &__link, &__title {
       &:before {
         content: attr(data-before);
+        line-height: 1.2;
         font-size: clamp(36px, 5vw, 54px);
       }
     }
