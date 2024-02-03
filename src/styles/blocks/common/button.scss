@@ -12,7 +12,7 @@
     &_large {
       font-size: 16px;
       line-height: 1.3;
-      padding: 1rem;
+      padding: clamp(12px, 3vw, 16px);
       border-radius: 10rem;
       display: flex;
       align-items: center;
