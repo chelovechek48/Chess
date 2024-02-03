@@ -3,7 +3,7 @@
 .running-line {
   color: $white;
   background-color: $red;
-  padding: 1rem 0;
+  padding: clamp(10px, 2vw, 16px) 0;
   overflow: hidden;
   display: flex;
 
@@ -22,7 +22,7 @@
   }
 
   &__item {
-    font-size: 22px;
+    font-size: clamp(16px, 4vw, 22px);
     font-family: 'Merriweather', serif;
     font-weight: 400;
     text-transform: uppercase;
