@@ -10,7 +10,6 @@
 
   display: flex;
   align-items: center;
-  gap: 1rem;
 
   &__item {
     transition: opacity 0.5s;
@@ -42,9 +41,18 @@
   }
 
   &__button {
-    width: 36px;
-    height: 36px;
     border-radius: 50%;
+
+    &_size {
+      &_large {
+        width: 44px;
+        height: 44px;
+      }
+      &_small {
+        width: 36px;
+        height: 36px;
+      }
+    }
 
     transition: 0.3s;
     background-color: $dark-gray;
@@ -60,6 +68,21 @@
 
     &-prev {
       transform: scale(-1);
+    }
+  }
+
+  &__number {
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    &:before {
+      content: attr(data-slide);
+    }
+    &:after {
+      content: '/ 'attr(max-slide)'';
+      color: rgba($dark-gray, 0.6);
+      margin-left: 5px;
     }
   }
 }

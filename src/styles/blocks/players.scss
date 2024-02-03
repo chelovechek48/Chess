@@ -1,8 +1,8 @@
 @use '../vars/' as *;
 
 .players {
-  margin-top: clamp(120px, 15vw, 200px);
-  margin-bottom: clamp(100px, 15vw, 140px);
+  padding-top: clamp(120px, 15vw, 173px);
+  padding-bottom: clamp(100px, 15vw, 140px);
   overflow: hidden;
 
   &__container {
@@ -25,25 +25,17 @@
     }
   }
 
-  &__navigation-number {
-    &:before {
-      content: attr(data-slide);
-      display: inline-flex;
-      justify-content: flex-end;
-      width: 12px;
-    }
-    &:after {
-      content: attr(max-slide);
-      display: inline-flex;
-      width: 12px;
-    }
-  }
-
   &__title {
     font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.2;
   }
 
   &__list {
+    &-wrapper {
+      max-width: 1150px;
+      width: 100%;
+      margin: 0 auto;
+    }
     transition: transform 0.5s;
     margin-top: 4rem;
     display: grid;
