@@ -1,7 +1,7 @@
 @use '../vars/' as *;
 
 .tournament {
-  padding-top: 80px;
+  padding-top: clamp(48px, 12vw, 80px);
 
   &__text, &__idea-image-wrapper::before {
     color: $dark-gray;
@@ -73,7 +73,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 44px;
+    gap: 19px 44px;
 
     &-image {
       width: 100%;
