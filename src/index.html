@@ -150,7 +150,7 @@
           data-before="Васюков">
           Будущие источники обогащения васюкинцев
         </a>
-        <ul class="stages__list">
+        <ul class="navigation__slider stages__list" data-slides-number="5">
           <li class="stages__item">
             Строительство железнодорожной магистрали Москва-Васюки
           </li>
@@ -173,44 +173,142 @@
             Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
           </li>
         </ul>
-        <div class="stages__navigation-wrapper">
-          <div class="stages__navigation">
-            <button class="stages__button stages__button-prev"></button>
-            <div class="stages__navigation-dots">
-              <span class="stages__navigation-dots-item active"></span>
-              <span class="stages__navigation-dots-item"></span>
-              <span class="stages__navigation-dots-item"></span>
-              <span class="stages__navigation-dots-item"></span>
-              <span class="stages__navigation-dots-item"></span>
+        <div class="navigation__wrapper">
+          <div class="stages__navigation navigation">
+            <button class="navigation__button navigation__button-prev"
+              data-increment="-1"
+              disabled></button>
+            <div class="navigation__dots">
+              <span class="navigation__dots-item active"></span>
+              <span class="navigation__dots-item"></span>
+              <span class="navigation__dots-item"></span>
+              <span class="navigation__dots-item"></span>
+              <span class="navigation__dots-item"></span>
             </div>
-            <button class="stages__button stages__button-next"></button>
+            <button class="navigation__button navigation__button-next"
+              data-increment="1"></button>
           </div>
         </div>
       </div>
     </section>
     <section class="players">
       <div class="players__container container">
-        <h2 class="title title_size_h2">
+        <h2 class="players__title title">
           Участники турнира
         </h2>
-        <ul class="players__list">
+        <ul class="navigation__slider players__list" data-slides-number="6">
           <li class="players__item">
             <div class="players__image-wrapper">
               <img class="players__image"
+                src="assets/icons/man-with-chess.svg"
                 alt="">
             </div>
-            <header class="players__item-title">
+            <header class="players__name">
               Хозе-Рауль Капабланка
             </header>
-            <p class="players__item-text">
+            <p class="players__description">
               Чемпион мира по шахматам
             </p>
-            <a class="button button_color_blue button_size_small"
+            <a class="players__button button button_color_blue"
+              href="">
+              Подробнее
+            </a>
+          </li>
+          <li class="players__item">
+            <div class="players__image-wrapper">
+              <img class="players__image"
+                src="assets/icons/man-with-chess.svg"
+                alt="">
+            </div>
+            <header class="players__name">
+              Хозе-Рауль Капабланка
+            </header>
+            <p class="players__description">
+              Чемпион мира по шахматам
+            </p>
+            <a class="players__button button button_color_blue"
+              href="">
+              Подробнее
+            </a>
+          </li>
+          <li class="players__item">
+            <div class="players__image-wrapper">
+              <img class="players__image"
+                src="assets/icons/man-with-chess.svg"
+                alt="">
+            </div>
+            <header class="players__name">
+              Хозе-Рауль Капабланка
+            </header>
+            <p class="players__description">
+              Чемпион мира по шахматам
+            </p>
+            <a class="players__button button button_color_blue"
+              href="">
+              Подробнее
+            </a>
+          </li>
+          <li class="players__item">
+            <div class="players__image-wrapper">
+              <img class="players__image"
+                src="assets/icons/man-with-chess.svg"
+                alt="">
+            </div>
+            <header class="players__name">
+              Хозе-Рауль Капабланка
+            </header>
+            <p class="players__description">
+              Чемпион мира по шахматам
+            </p>
+            <a class="players__button button button_color_blue"
+              href="">
+              Подробнее
+            </a>
+          </li>
+          <li class="players__item">
+            <div class="players__image-wrapper">
+              <img class="players__image"
+                src="assets/icons/man-with-chess.svg"
+                alt="">
+            </div>
+            <header class="players__name">
+              Хозе-Рауль Капабланка
+            </header>
+            <p class="players__description">
+              Чемпион мира по шахматам
+            </p>
+            <a class="players__button button button_color_blue"
+              href="">
+              Подробнее
+            </a>
+          </li>
+          <li class="players__item">
+            <div class="players__image-wrapper">
+              <img class="players__image"
+                src="assets/icons/man-with-chess.svg"
+                alt="">
+            </div>
+            <header class="players__name">
+              Хозе-Рауль Капабланка
+            </header>
+            <p class="players__description">
+              Чемпион мира по шахматам
+            </p>
+            <a class="players__button button button_color_blue"
               href="">
               Подробнее
             </a>
           </li>
         </ul>
+        <div class="players__navigation navigation">
+          <button class="navigation__button navigation__button-prev"
+            data-increment="-1"
+            disabled></button>
+          <span class="navigation__number players__navigation-number"> / </span>
+          <button class="navigation__button navigation__button-next"
+            data-increment="1"></button>
+        </div>
+      </div>
       </div>
     </section>
     <aside class="running-line">

@@ -1,5 +1,5 @@
 import '@/styles/style';
-import './stages';
+import './slider';
 
 const runningLineList = document.querySelectorAll('.running-line');
 

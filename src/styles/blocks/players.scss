@@ -1,0 +1,108 @@
+@use '../vars/' as *;
+
+.players {
+  margin-top: clamp(120px, 15vw, 200px);
+  margin-bottom: clamp(100px, 15vw, 140px);
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+  }
+
+  &__navigation {
+    @media (min-width: calc($mobile + 1px)) {
+      position: absolute;
+      top: 0;
+      right: $padding-container;
+      height: clamp(45px, 6.25vw, 68px);
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+      margin-top: 50px;
+    }
+  }
+
+  &__navigation-number {
+    &:before {
+      content: attr(data-slide);
+      display: inline-flex;
+      justify-content: flex-end;
+      width: 12px;
+    }
+    &:after {
+      content: attr(max-slide);
+      display: inline-flex;
+      width: 12px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(36px, 5vw, 54px);
+  }
+
+  &__list {
+    transition: transform 0.5s;
+    margin-top: 4rem;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(6, 1fr);
+    width: calc((100% + (var(--gap))) * 6/var(--number-of-visible) - (var(--gap)));
+    @media (min-width: calc($mobile + 1px)) {
+      --gap: 100px;
+      --number-of-visible: 3;
+    }
+    @media (max-width: $mobile) {
+      --gap: 8vw;
+      --number-of-visible: 2;
+    }
+    @media (max-width: $mobile_small) {
+      --gap: 1.5rem;
+      --number-of-visible: 1;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__image {
+    margin-top: 7%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    &-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $yellow-brown;
+      background-image: url('@images/players/player-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 6px;
+  }
+
+  &__description {
+    color: rgba($dark-gray, 0.6);
+    font-size: 20px;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: 20px;
+    
+    color: $blue;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 7px 12px;
+    border-radius: 3rem;
+    border: 1px solid $blue;
+  }
+}

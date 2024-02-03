@@ -59,6 +59,11 @@
     }
   }
   @media (min-width: calc($mobile_small + 1px)) {
+    &__navigation {
+      display: none !important;
+    }
+  }
+  @media (min-width: calc($mobile_small + 1px)) {
     &__list {
       transform: none !important;
     }
@@ -66,9 +71,6 @@
       background-color: $yellow-brown;
       background-image: url('@images/stages/stages-list-bg.jpg');
       background-size: cover;
-    }
-    &__navigation-wrapper {
-      display: none;
     }
   }
   @media (max-width: $mobile_small) {
@@ -79,7 +81,8 @@
       background-repeat: space repeat;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, auto);
-      gap: $padding-container;
+      --gap: 1.5rem;
+      gap: var(--gap);
       transition: transform 0.5s;
       padding: 4rem 0 $padding-container 0;
     }
@@ -125,62 +128,6 @@
       &:nth-child(7) {
         grid-row-start: 1;
         grid-row-end: 5;
-      }
-    }
-
-    &__navigation {
-      &-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 28px;
-      }
-
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-
-      &-dots {
-        display: flex;
-        gap: 6px;
-        &-item {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          display: block;
-
-          cursor: pointer;
-          transition: 0.3s;
-          background-color: rgba($dark-gray, 0.2);
-          &.active {
-            background-color: $dark-gray;
-          }
-          &:hover {
-            background-color: $golden;
-          }
-        }
-      }
-    }
-    
-    &__button {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-
-      transition: 0.3s;
-      background-color: $dark-gray;
-      background-image: url('@icons/arrow.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      &:hover {
-        background-color: $golden;
-      }
-      &:disabled {
-        background-color: rgba($dark-gray, 0.2);
-      }
-
-      &-prev {
-        transform: scale(-1);
       }
     }
   }

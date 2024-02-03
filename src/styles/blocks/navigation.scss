@@ -1,0 +1,65 @@
+@use '../vars/' as *;
+
+.navigation {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__item {
+    transition: opacity 0.5s;
+    opacity: 0;
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    gap: 6px;
+    &-item {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: block;
+
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: rgba($dark-gray, 0.2);
+      &.active {
+        background-color: $dark-gray;
+      }
+      &:hover {
+        background-color: $golden;
+      }
+    }
+  }
+
+  &__button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    transition: 0.3s;
+    background-color: $dark-gray;
+    background-image: url('@icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      background-color: $golden;
+    }
+    &:disabled {
+      background-color: rgba($dark-gray, 0.2);
+    }
+
+    &-prev {
+      transform: scale(-1);
+    }
+  }
+}
