@@ -1,0 +1,11 @@
+@use '../vars/' as *;
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: clamp(60px, 5.5vw, 72px);
+  
+  font-size: 1rem;
+  font-weight: 400;
+  color: $dark-gray;
+  background-color: $yellow-brown;
+}
