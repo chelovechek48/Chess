@@ -177,18 +177,20 @@
       font-size: 0;
     }
     &__link {
-      max-width: 35rem;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      &::before {
-        font-family: 'Merriweather', serif;
-        color: $dark-gray;
-        text-transform: uppercase;
-        cursor: default;
+      &-wrapper {
+        max-width: 35rem;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        &::before {
+          font-family: 'Merriweather', serif;
+          color: $dark-gray;
+          text-transform: uppercase;
+          cursor: default;
+        }
       }
     }
-    &__link, &__title {
+    &__link-wrapper, &__title {
       &:before {
         content: attr(data-before);
         line-height: 1.2;

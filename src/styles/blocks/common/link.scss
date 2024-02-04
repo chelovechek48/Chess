@@ -1,6 +1,25 @@
 @use '../../vars/' as *;
 
 .link {
+  display: inline-block;
   color: $blue;
   font-size: 20px;
+  transition: all 0.2s;
+  box-shadow: 0 0 0 0.4rem transparent;
+
+  &:hover {
+    color: $dark-gray;
+    background-color: $yellow-brown;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.4rem $yellow-brown;
+  }
+
+  &:focus-visible {
+    outline-color: $blue;
+    outline-width: 0.25rem;
+    outline-offset: 0.4rem;
+    outline-style: solid;
+    border-radius: 0.25rem;
+    transition: outline 0.2s;
+  }
 }
