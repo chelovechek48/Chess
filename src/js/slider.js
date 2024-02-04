@@ -1,8 +1,8 @@
 const gap = 'var(--gap)';
-const paddingContainer = 1.5;
-const paddingContainerRem = `${paddingContainer}rem`;
-const containerWidth = `${76.25 + paddingContainer}rem`;
-const movementSize = (index) => (`calc(0px - ((min(100vw, ${containerWidth}) - 2 * ${paddingContainerRem} + ${gap}) * ${index}))`);
+const wrapperMaxWidth = '1150px';
+const wrapperPadding = '20px';
+const wrapperWidth = `min(calc(100vw - ${wrapperPadding} * 2), ${wrapperMaxWidth})`;
+const movementSize = (index) => (`calc(0px - (${wrapperWidth} + ${gap}) * ${index})`);
 
 const moveSlide = (navigationBlock, increment) => {
   const slider = navigationBlock.parentElement.parentElement.querySelector('.navigation__slider');
@@ -35,6 +35,13 @@ const moveSlide = (navigationBlock, increment) => {
   if (number) {
     number.setAttribute('data-slide', slideIndex + 1);
     number.setAttribute('max-slide', maxItems / numberOfVisible);
+  }
+
+  const dotItems = slider.parentElement.querySelectorAll('.navigation__dots-item');
+  const dotItemActive = slider.parentElement.querySelector('.navigation__dots-item.active');
+  if (dotItemActive) {
+    dotItemActive.classList.remove('active');
+    dotItems[slideIndex].classList.add('active');
   }
 };
 
@@ -77,14 +84,27 @@ navigationDots.forEach((dotList) => {
   const dotItems = dotList.querySelectorAll('.navigation__dots-item');
   dotItems.forEach((dotItem, index) => {
     dotItem.addEventListener('click', () => {
-      const dotItemActive = dotList.querySelector('.navigation__dots-item.active');
-      dotItemActive.classList.remove('active');
-      dotItem.classList.add('active');
-
       const navBlock = dotItem.parentElement.parentElement;
       const increment = index - Number(navBlock.getAttribute('data-slide'));
 
       moveSlide(navBlock, increment);
     });
+  });
+});
+
+const playersLinks = document.querySelectorAll('.players__item .button');
+const playersNavigation = document.querySelector('.players__navigation');
+const playersList = document.querySelector('.players__list');
+playersLinks.forEach((link, index) => {
+  link.addEventListener('focus', () => {
+    const itemsInSlide = Number(getComputedStyle(playersList).getPropertyValue('--number-of-visible'));
+    const currentSlide = Number(playersNavigation.getAttribute('data-slide'));
+    const nextSlide = Math.floor((index) / itemsInSlide);
+
+    const increment = nextSlide - currentSlide;
+    moveSlide(playersNavigation, increment);
+
+    const title = document.querySelector('.players__title');
+    title.scrollIntoView({ inline: 'end', behavior: 'instant' });
   });
 });
