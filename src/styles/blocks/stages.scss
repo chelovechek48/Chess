@@ -4,19 +4,58 @@
   overflow: hidden;
   &__title {
     font-size: 0;
-    margin-top: clamp(120px, 15vw, 188px);
+    margin-top: clamp(116px, 15vw, 188px);
     font-weight: 400;
     line-height: 1.2;
   }
 
+  &__image {
+    @media (min-width: calc($mobile + 1px)) {
+      &-wrapper {
+        position: relative;
+        min-width: min(38%, 280px);
+      }
+      width: 360px;
+      bottom: 5%;
+      left: -1.5rem;
+      position: absolute;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+    @media (max-width: $mobile_small) {
+      &-wrapper {
+        transition: transform 0.7s;
+        position: absolute;
+        left: 0;
+        bottom: 85%;
+        width: calc(100vw - $padding-container * 2);
+        padding-left: $padding-container;
+      }
+    }
+  }
+
   &__list {
-    margin-top: 54px;
+    @media (min-width: calc($mobile_small + 1px)) {
+      margin-top: 54px;
+    }
+    @media (max-width: $mobile_small) {
+      margin-top: 145px;
+    }
 
     display: grid;
-    gap: 20px;
+    --gap: 20px;
   }
   &__item {
-    font-size: 20px;
+    &-content {
+      display: flex;
+      gap: 0 2rem;
+      @media (max-width: $mobile) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    font-size: clamp(18px, 4vw, 20px);
     font-weight: 500;
 
     display: flex;
@@ -67,6 +106,7 @@
   @media (min-width: calc($mobile_small + 1px)) {
     &__list {
       transform: none !important;
+      gap: var(--gap);
     }
     &__item {
       background-color: $yellow-brown;
@@ -76,16 +116,15 @@
   }
   @media (max-width: $mobile_small) {
     &__list {
+      gap: 28px var(--gap);
       width: calc(5 * (100vw - $padding-container) - $padding-container);
       background-image: url('@images/stages/stages-list-bg.jpg');
       background-size: calc(100vw - 2 * $padding-container);
       background-repeat: space repeat;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, auto);
-      --gap: 1.5rem;
-      gap: var(--gap);
       transition: transform 0.5s;
-      padding: 4rem 0 $padding-container 0;
+      padding: 4rem 0 0 0;
     }
     &__item {
       padding: 0 $padding-container;

@@ -43,6 +43,12 @@ const moveSlide = (navigationBlock, increment) => {
     dotItemActive.classList.remove('active');
     dotItems[slideIndex].classList.add('active');
   }
+
+  if (slider === document.querySelector('.stages__list')) {
+    const movementImage = (index) => (`calc((${wrapperWidth} + ${gap}) * ${index})`);
+    const plane = document.querySelector('.stages__image-wrapper');
+    plane.style.transform = `translateX(${movementImage(slideIndex)})`;
+  }
 };
 
 const navigationButtons = document.querySelectorAll('.navigation__button');

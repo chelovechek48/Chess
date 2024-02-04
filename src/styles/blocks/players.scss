@@ -37,7 +37,7 @@
       margin: 0 auto;
     }
     transition: transform 0.5s;
-    margin-top: 4rem;
+    margin-top: clamp(50px, 13vw, 4rem);
     display: grid;
     gap: var(--gap);
     grid-template-columns: repeat(6, 1fr);
