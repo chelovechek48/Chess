@@ -1,4 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@fonts/GolosText/GolosText-Regular.woff2') format('woff2'),
+       url('@fonts/GolosText/GolosText-Regular.woff') format('woff'),
+       url('@fonts/GolosText/GolosText-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  src: url('@fonts/GolosText/GolosText-Medium.woff2') format('woff2'),
+       url('@fonts/GolosText/GolosText-Medium.woff') format('woff'),
+       url('@fonts/GolosText/GolosText-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  src: url('@fonts/GolosText/GolosText-SemiBold.woff2') format('woff2'),
+       url('@fonts/GolosText/GolosText-SemiBold.woff') format('woff'),
+       url('@fonts/GolosText/GolosText-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url('@fonts/GolosText/GolosText-Bold.woff2') format('woff2'),
+       url('@fonts/GolosText/GolosText-Bold.woff') format('woff'),
+       url('@fonts/GolosText/GolosText-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@fonts/Merriweather/Merriweather-Regular.woff2') format('woff2'),
+       url('@fonts/Merriweather/Merriweather-Regular.woff') format('woff'),
+       url('@fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: url('@fonts/Merriweather/Merriweather-Bold.woff2') format('woff2'),
+       url('@fonts/Merriweather/Merriweather-Bold.woff') format('woff'),
+       url('@fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
+}
 
 * {
   font-family: 'Golos Text', sans-serif;
