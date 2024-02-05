@@ -1,6 +1,7 @@
 @use '../vars/' as *;
 
 .stages {
+  margin-top: calc(0px - $padding-container);
   overflow: hidden;
   &__title {
     font-size: 0;

@@ -2,6 +2,8 @@
 
 .tournament {
   padding-top: clamp(48px, 12vw, 80px);
+  padding-bottom: $padding-container;
+  overflow: hidden;
 
   &__text, &__idea-image-wrapper::before {
     color: $dark-gray;
@@ -78,6 +80,50 @@
     &-image {
       width: 100%;
       flex: 0 1 474px;
+      &-wrapper {
+        position: relative;
+      }
+      &-front {
+        position: absolute;
+        width: calc(100% + 4rem);
+        height: 100%;
+        top: 0;
+        left: -2rem;
+
+        background-repeat: no-repeat;
+        background-image:
+          url('@images/tournament/hand.png'),
+          url('@images/tournament/chess.png');
+
+        background-position:
+          89% 100%,
+          5% 96%;
+
+        background-size:
+          52%,
+          47%;
+
+        pointer-events: none;
+        animation: front-animation linear infinite 3s;
+        
+        @keyframes front-animation {
+          0% {
+            background-position:
+              89% 100%,
+              5% 96%;
+          }
+          50% {
+            background-position:
+              95% 100%,
+              5% 100%;
+          }
+          100% {
+            background-position:
+              89% 100%,
+              5% 96%;
+          }
+        }
+      }
     }
 
     &-content {
