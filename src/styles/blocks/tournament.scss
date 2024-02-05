@@ -94,6 +94,15 @@
         background-image:
           url('@images/tournament/hand.png'),
           url('@images/tournament/chess.png');
+        background-image:
+        image-set(
+          url('@images/tournament/hand.webp') type("image/webp"),
+          url('@images/tournament/hand.png') type("image/png")
+        ),
+        image-set(
+          url('@images/tournament/chess.webp') type("image/webp"),
+          url('@images/tournament/chess.png') type("image/png")
+        );
 
         background-position:
           89% 100%,
