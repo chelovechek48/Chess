@@ -2,33 +2,110 @@
 
 .hero {
   position: relative;
-  
   background-color: $yellow-brown;
+  
   background-image:
+    url('@images/hero/chess-front.png'),
     url('@images/hero/bg.png'),
-    url('@images/hero/city.png');
-  background-size:
-    auto,
-    1604px auto;
-  background-blend-mode:
-    color-burn,
-    normal;
-  background-repeat:
-    repeat,
-    no-repeat;
-  background-position: center bottom;
+    url('@images/hero/city.png'),
+    url('@images/hero/chess-back.png'),
+    url('@images/hero/sun.svg');
 
-  @media (max-width: $mobile) {
-    background-size:
-      auto,
-      200vw auto;
-    background-position: right -3.5rem bottom;
+  background-blend-mode:
+    normal,
+    color-burn,
+    normal,
+    normal,
+    normal;
+  
+  background-repeat:
+    no-repeat,
+    repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+  
+  animation-name: hero-bg-init;
+  animation-duration: 2s;
+
+  @media (min-width: calc($mobile + 1px)) {
+    $backrdoundStart: calc((100vw - $padding-container * 2 - 1600px) / 2);
+
+    background-position:
+      calc($backrdoundStart + 975px) 112%,
+      center bottom,
+      center bottom,
+      calc($backrdoundStart + 865px) 50%,
+      calc($backrdoundStart + 810px) -110%;
+      
+    background-size: auto;
+
+    @keyframes hero-bg-init {
+      0% {
+        background-position:
+          calc($backrdoundStart + 1100px) 112%,
+          center bottom,
+          center bottom,
+          calc($backrdoundStart + 865px) 100%,
+          calc($backrdoundStart + 1010px) 500px;
+        background-size: 
+          auto,
+          auto,
+          auto,
+          auto,
+          360px;
+      }
+      100% {
+        background-position:
+          calc($backrdoundStart + 975px) 112%,
+          center bottom,
+          center bottom,
+          calc($backrdoundStart + 865px) 50%,
+          calc($backrdoundStart + 810px) -110%;
+        background-size: 
+          auto,
+          auto,
+          auto,
+          auto,
+          660px;
+      }
+    }
   }
-  @media (max-width: $mobile_small) {
-    background-size:
+  @media (max-width: $mobile) {
+    $backrdoundStart: calc((100vw - $padding-container * 2 - 887px) / 2);
+
+    background-position:
+      calc($backrdoundStart + 420px) 103%,
+      center bottom,
+      calc($backrdoundStart + -136px) bottom,
+      calc($backrdoundStart + 340px) 84%,
+      calc($backrdoundStart + 310px) 85%;
+
+    background-size: 
+      242px,
       auto,
-      auto 25rem;
-    background-position: right -3.5rem bottom;
+      887px,
+      232px,
+      300px;
+
+    @keyframes hero-bg-init {
+      0% {
+        background-position:
+          calc($backrdoundStart + 470px) 103%,
+          center bottom,
+          calc($backrdoundStart + -136px) bottom,
+          calc($backrdoundStart + 340px) 100%,
+          calc($backrdoundStart + 310px) 85%;
+      }
+      100% {
+        background-position:
+          calc($backrdoundStart + 420px) 103%,
+          center bottom,
+          calc($backrdoundStart + -136px) bottom,
+          calc($backrdoundStart + 340px) 84%,
+          calc($backrdoundStart + 310px) 85%;
+      }
+    }
   }
 
   &__container {
