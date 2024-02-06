@@ -8,18 +8,6 @@
     outline-offset: 0.4rem;
     outline-style: solid;
   }
-  &_size {
-    &_large {
-      font-size: 16px;
-      line-height: 1.3;
-      padding: clamp(12px, 3vw, 16px);
-      border-radius: 10rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  }
 
   &_color {
     &_black {
