@@ -46,7 +46,7 @@
       --gap: 100px;
       --number-of-visible: 3;
     }
-    @media (max-width: $mobile) {
+    @media (max-width: $mobile) and (min-width: calc($mobile_small + 1px)) {
       --gap: 8vw;
       --number-of-visible: 2;
     }

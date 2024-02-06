@@ -9,26 +9,52 @@
     url('@images/hero/bg.jpg'),
     url('@images/hero/city.png'),
     url('@images/hero/chess-back.png'),
-    url('@images/hero/sun.svg');
+    url('@images/hero/sun.png');
 
-  background-image:
-  image-set(
-    url('@images/hero/chess-front.webp') type("image/webp"),
-    url('@images/hero/chess-front.png') type("image/png")
-  ),
-  image-set(
-    url('@images/hero/bg.webp') type("image/webp"),
-    url('@images/hero/bg.jpg') type("image/jpg")
-  ),
-  image-set(
-    url('@images/hero/city.webp') type("image/webp"),
-    url('@images/hero/city.png') type("image/png")
-  ),
-  image-set(
-    url('@images/hero/chess-back.webp') type("image/webp"),
-    url('@images/hero/chess-back.png') type("image/png")
-  ),
-  url('@images/hero/sun.svg');
+  @media (min-width: calc($mobile + 1px)) {
+    background-image:
+      image-set(
+        url('@images/hero/chess-front.webp') type("image/webp"),
+        url('@images/hero/chess-front.png') type("image/png")
+      ),
+      image-set(
+        url('@images/hero/bg.webp') type("image/webp"),
+        url('@images/hero/bg.jpg') type("image/jpg")
+      ),
+      image-set(
+        url('@images/hero/city-large.webp') type("image/webp"),
+        url('@images/hero/city.png') type("image/png")
+      ),
+      image-set(
+        url('@images/hero/chess-back.webp') type("image/webp"),
+        url('@images/hero/chess-back.png') type("image/png")
+      ),
+      url('@images/hero/sun-animated.svg');
+  }
+
+  @media (max-width: $mobile) {
+    background-image:
+      image-set(
+        url('@images/hero/chess-front.webp') type("image/webp"),
+        url('@images/hero/chess-front.png') type("image/png")
+      ),
+      image-set(
+        url('@images/hero/bg.webp') type("image/webp"),
+        url('@images/hero/bg.jpg') type("image/jpg")
+      ),
+      image-set(
+        url('@images/hero/city-small.webp') type("image/webp"),
+        url('@images/hero/city.png') type("image/png")
+      ),
+      image-set(
+        url('@images/hero/chess-back.webp') type("image/webp"),
+        url('@images/hero/chess-back.png') type("image/png")
+      ),
+      image-set(
+        url('@images/hero/sun.webp') type("image/webp"),
+        url('@images/hero/sun.png') type("image/png")
+      );
+  }
 
   background-blend-mode:
     normal,
@@ -100,7 +126,7 @@
       calc($backrdoundStart + 340px) 84%,
       calc($backrdoundStart + 310px) 85%;
 
-    background-size: 
+    background-size:
       242px,
       auto,
       887px,
