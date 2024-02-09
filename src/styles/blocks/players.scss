@@ -31,12 +31,24 @@
   }
 
   &__list {
+    &:nth-child(2), &:nth-child(3) {
+      position: absolute;
+      top: 0;
+    }
+    &:nth-child(2) {
+      right: calc(var(--gap) + 100%);
+    }
+    &:nth-child(3) {
+      left: calc(var(--gap) + (100% + (var(--gap))) * 6/var(--number-of-visible) - (var(--gap)));
+    }
     &-wrapper {
+      position: relative;
       max-width: 1150px;
       width: 100%;
       margin: 0 auto;
     }
-    transition: transform 0.5s;
+    --transition: 0.5s;
+    transition: var(--transition);
     margin-top: clamp(50px, 13vw, 4rem);
     display: grid;
     gap: var(--gap);

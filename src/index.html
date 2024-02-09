@@ -205,23 +205,22 @@
             </div>
           </li>
         </ul>
-        <div class="navigation__wrapper">
-          <div class="stages__navigation navigation">
-            <button class="button navigation__button button navigation__button-prev"
-              data-increment="-1"
-              disabled
-              aria-label="перейти к предыдущему слайду"></button>
-            <div class="navigation__dots">
-              <span class="navigation__dots-item active"></span>
-              <span class="navigation__dots-item"></span>
-              <span class="navigation__dots-item"></span>
-              <span class="navigation__dots-item"></span>
-              <span class="navigation__dots-item"></span>
-            </div>
-            <button class="button navigation__button button navigation__button-next"
-              data-increment="1"
-              aria-label="перейти к следующему слайду"></button>
+        <div class="stages__navigation navigation navigation__wrapper">
+          <button class="button navigation__button button navigation__button-prev"
+            data-increment="-1"
+            disabled
+            data-disabled="true"
+            aria-label="перейти к предыдущему слайду"></button>
+          <div class="navigation__dots">
+            <span class="navigation__dots-item active"></span>
+            <span class="navigation__dots-item"></span>
+            <span class="navigation__dots-item"></span>
+            <span class="navigation__dots-item"></span>
+            <span class="navigation__dots-item"></span>
           </div>
+          <button class="button navigation__button button navigation__button-next"
+            data-increment="1"
+            aria-label="перейти к следующему слайду"></button>
         </div>
       </div>
     </section>
@@ -230,17 +229,16 @@
         <h2 class="players__title title">
           Участники турнира
         </h2>
-        <div class="players__navigation navigation">
+        <div class="players__navigation navigation" data-slider-loop="true">
           <button class="button navigation__button button navigation__button-prev"
             data-increment="-1"
-            disabled
             aria-label="перейти к предыдущему слайду"></button>
           <span class="navigation__number"></span>
           <button class="button navigation__button button navigation__button-next"
             data-increment="1"
             aria-label="перейти к следующему слайду"></button>
         </div>
-        <div class="players__list-wrapper">
+        <div class="players__list-wrapper navigation__slider-wrapper">
           <ul class="navigation__slider players__list" data-slides-number="6">
             <li class="players__item">
               <div class="players__image"></div>

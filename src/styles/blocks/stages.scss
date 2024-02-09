@@ -15,6 +15,7 @@
       &-wrapper {
         position: relative;
         min-width: min(38%, 280px);
+        will-change: transform;
       }
       width: 360px;
       bottom: 5%;

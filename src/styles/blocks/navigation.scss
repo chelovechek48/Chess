@@ -11,6 +11,10 @@
   display: flex;
   align-items: center;
 
+  &__slider {
+    will-change: transform;
+  }
+
   &__item {
     transition: opacity 0.5s;
     opacity: 0;
